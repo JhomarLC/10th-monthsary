@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="paper">
+        <div class="holes"></div>
+        <textarea id="text-area" disabled></textarea>
+    </div>
+    <script>
+        function StartTyping() {
+            var text = "Dear Mahal,\n\n\tHappy 10th monthsary saatin! Una sa lahat I'm very thankful for everything. Thank you sayo, I can't even imagine my world without you. Like for real, bahagi ka na ng buhay ko. I will make sure na 'till death do us part talaga. Gusto kong malaman mo na ikaw na yung babaeng gusto ko makasama sa lahat. Walang iwanan mahal ah? walang susuko. Patuloy parin nating harapin nang magkasama ang mga problem natin, sorry kase minsan pag nag oopen up ka sakin napapagalitan lang kita, binabago ko na yun mga konti na lang siguro HAHAHAHH char. Pero baby magsabi ka lang ha? Oo tama yan HAHAHHAHA. Char basta baby sorry mwaaaa."+
+                        "\n\n\tSorry pala baby sa mga bad treatments na natatanggap mo pa rin 'till now, I promise I'm evolving, pokemon yarn HAHAHHA char kidding aside I will be a better person. I don't have any gifts for you, bawi na lang ako sa susunod! Thank youuu baby always and I love youu. Palagi mo yan tatandaan na MAHAL NA MAHAL NA MAHAL NA MAHAL KITA."+
+                        "\n\n\nYours lang, Jhomar";
+            var index = 0;
+            var speed = 50; 
+        
+            var timer = setInterval(function() {
+                document.getElementById('text-area').value += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(timer);
+                }
+            }, speed);
+        };
+
+        StartTyping();
+
+    </script>
+</body>
+</html>
